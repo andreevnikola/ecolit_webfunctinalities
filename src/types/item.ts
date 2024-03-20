@@ -1,5 +1,5 @@
-import ICoupon from './coupon';
-import { IUser } from './user';
+import ICoupon from "./coupon";
+import { IUser } from "./user";
 
 export interface IItem {
   id: number;
@@ -7,4 +7,5 @@ export interface IItem {
   is_active: boolean;
   coupon: ICoupon;
   user: IUser;
+  used_at: Date;
 }

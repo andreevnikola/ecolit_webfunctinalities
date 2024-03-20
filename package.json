@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ionic/react": "^7.8.1",
     "@supabase/supabase-js": "^2.39.8",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -11,6 +12,7 @@
     "@types/node": "^16.18.89",
     "@types/react": "^18.2.67",
     "@types/react-dom": "^18.2.22",
+    "ionicons": "^7.3.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
     "react": "^18.2.0",
