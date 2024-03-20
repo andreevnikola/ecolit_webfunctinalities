@@ -44,6 +44,8 @@ export default function CouponVerifier() {
       .returns<IItem[]>();
     setIsLoading(false);
 
+    console.log(data);
+
     if (data.error && data.status === 400) {
       setError(
         <p className="text-red-600 font-bold text-xl">Невалиден купон.</p>
@@ -56,6 +58,13 @@ export default function CouponVerifier() {
         <p className="text-center">
           Нещо се обърка. Моля опитайте пак по-късно!
         </p>
+      );
+      return;
+    }
+
+    if (data.data.length < 1) {
+      setError(
+        <p className="text-red-600 font-bold text-xl">Невалиден купон.</p>
       );
       return;
     }
@@ -89,6 +98,12 @@ export default function CouponVerifier() {
     alert("Купона беше успешно отблеязан като приложен!");
     fetch();
   };
+
+  console.log("=========");
+  console.log(storeTypeData);
+  console.log(item);
+  console.log(error);
+  console.log(isLoading);
 
   return (
     <div className="flex flex-col gap-10 justify-center items-center top-10 py-20 px-3 min-h-screen">
