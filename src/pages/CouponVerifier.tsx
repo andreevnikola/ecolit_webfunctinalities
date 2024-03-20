@@ -96,7 +96,7 @@ export default function CouponVerifier() {
       {isLoading && <p className="text-center">Моля изчакайте ...</p>}
       {error && <>{error}</>}
       {!isLoading && !error && storeTypeData && item && (
-        <div className="flex flex-col gap-2 p-0 w-full items-center justify-center">
+        <div className="flex flex-col gap-2 p-0 w-full items-center justify-center max-w-xl">
           {item.is_active ? (
             <h2 className="text-green-500 text-xl">Купона е валиден!</h2>
           ) : (
