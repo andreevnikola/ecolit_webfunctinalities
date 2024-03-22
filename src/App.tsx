@@ -8,6 +8,7 @@ import * as ionIcons from "ionicons/icons";
 import coin from "../assets/coin.png";
 
 import { addIcons } from "ionicons";
+import BinPage from "./pages/Bin";
 addIcons(ionIcons);
 
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/coupon/:couponId/:userId",
     element: <CouponVerifier />,
+  },
+  {
+    path: "/bin",
+    element: <BinPage />,
   },
 ]);
 
