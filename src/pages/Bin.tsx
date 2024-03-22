@@ -87,6 +87,9 @@ export default function BinPage() {
     if (!user) return;
 
     (async () => {
+      console.log(user.points + prize);
+      console.log(user.id);
+
       const { error } = await supabase
         .from("users")
         .update({ points: user.points + prize })
@@ -158,6 +161,11 @@ export default function BinPage() {
             onError={(error) => {
               console.log(error?.message);
               alert("Нещо се обърка, моля опитайте пак по-късно!");
+            }}
+            options={{
+              constraints: {
+                facingMode: { exact: "user" },
+              },
             }}
           />
           <p className="text-textShade text-sm font-serif text-center">
